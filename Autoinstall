@@ -1,0 +1,38 @@
+pkg install -y proot wget
+mkdir ~/ubuntu_directory
+cd ~/ubuntu_directory
+
+wget https://raw.githubusercontent.com/Neo-Oli/termux-ubuntu/master/ubuntu.sh
+sed -i 's/disco/focal/g' ubuntu.sh
+bash ubuntu.sh
+
+sed -i 's/#command+=" -b \/data/command+=" -b \/data/g' start-ubuntu.sh
+
+#termux-setup-storage
+#mkdir ~/storage/shared/Geyser/
+#ln -s ~/storage/shared/Geyser/ ~/Geyser
+
+mkdir ~/Geyser/
+cd ~/Geyser/
+
+cd ~
+
+cat >.profile <<EOM
+apt update
+apt install -y default-jre
+
+echo
+echo Ubuntu has been installed!
+echo You can now start the Ubuntu system at any time using
+echo ./ubuntu_directory/start-ubuntu.sh
+echo copy the command and keep it safe
+
+
+rm -rf .profile
+
+exit
+EOM
+
+./ubuntu_directory/start-ubuntu.sh
+
+echo now watch the next steps in LeGENdaryZ Video
