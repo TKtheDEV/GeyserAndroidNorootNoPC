@@ -1,0 +1,29 @@
+[Termux] https://play.google.com/store/apps/details?id=com.termux&hl=de
+
+
+[Installer] curl https://raw.githubusercontent.com/TKtheDEV/GeyserAndroidNorootNoPC/master/Autoinstall | bash
+
+
+[Geyser.Jar edited] https://drive.google.com/file/d/1remD1vPnlLbkoVrCJPN01ge0YufPn9i7/view?usp=sharing
+
+
+[Config.yml edited] https://drive.google.com/file/d/18fvwShZDP6JAalXpaXFZ2WP5VvDdU1Xh/view?usp=sharing
+
+
+[Zugriff auf Speicher] termux-setup-storage
+
+
+[Geyser.Jar Kopieren] cp -r /storage/emulated/0/Download/Geyser.jar /data/data/com.termux/files/home/Geyser
+
+
+[Config.yml Kopieren] cp -r /storage/emulated/0/Download/config.yml /data/data/com.termux/files/home/Geyser
+
+
+[Start Geyser]
+./ubuntu_directory/start-ubuntu.sh
+
+cd Geyser
+
+java -jar Geyser.jar
+
+[Config löschen] rm config.yml
